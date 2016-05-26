@@ -1,0 +1,906 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, p, ul, li{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-width: 1090px;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    color: white;
+    margin: 0 auto;
+}
+
+/** Nav Menu **/
+
+.navMenu {
+    width: 100%;
+    height: 50px;
+    border: 1px black solid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row;
+        flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 0 90px 0 130px;
+    background: #161617;
+    z-index: 2;
+    position: fixed;
+    min-width: 1060px;
+}
+
+#navMenu__right__cloud{
+    background: url(https://s.yimg.com/uy/build/images/sprites/icons-91597866.png) -99px -429px no-repeat;
+    min-width: 30px;
+    height: 20px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#navMenu__signIn {
+    min-width:50px;
+}
+
+.navMenu a:hover{
+    color: #d0d0d1;
+}
+
+.navMenu__left {
+   margin-right: auto; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+#navMenu__right__input{
+    padding: 10px 20px;
+    background-color: #d0d0d1;
+    border: 1px solid black;
+    border-radius: 2px 2px 2px 2px;
+    width: 220px;
+    -webkit-transition: width .5s;
+    transition:width .5s;
+    background-image: url(magGlass.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 3% 40%
+}
+
+
+#navMenu__right__input:focus {
+    width: 360px;
+    background-color: #fff;
+    -webkit-transition: width .5s;
+    transition: width .5s;
+    background-image: url(magGlass.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 1% 40%
+}
+
+::-webkit-input-placeholder {
+   font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+     font-weight: 300;
+    color: #7a7a7c;
+    padding-left: 5px;
+    
+}
+
+#navMenu__left__logo{
+    background-image: url(https://s.yimg.com/uy/build/images/sprites/general@2x-198faab9.png);
+    background-size: 72px 51px;
+    width: 72px;
+    height: 23px;
+    margin-top: -3px;
+}
+.navMenu__left > a{
+    min-width: 52px;
+}
+
+.navMenu__left > *,
+.navMenu__right > * {
+    margin-right: 32px;
+    text-decoration: none;
+    color: white;
+}
+
+.navMenu__right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+#navMenu__signUp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 5px;
+    min-width: 100px;
+    background: #128fdc;
+    color: white;
+    border-radius: 4px 4px 4px 4px;
+}
+
+#navMenu__signUp:hover{
+    background-color:#1072ab;
+}
+
+#navMenu__dropdown{
+    position: relative;
+}
+
+#navMenu__dropdown__content {
+    display: none;
+    width: 120px;
+    height: auto;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px black;
+    position: absolute;
+    top: 45px;
+    left: 232px;
+    border-radius: 4px 4px 4px 4px;
+    padding: 10px 
+}
+
+#navMenu__dropdown:hover + #navMenu__dropdown__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column;
+        flex-flow: column;
+}
+
+#navMenu__dropdown__content > * {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px;
+    font-size: 0.9em
+}
+
+/** Nav Menu Mobile **/
+
+.navMenuMobile {
+    display: none;
+    width: 100%;
+    height: 50px;
+    -ms-flex-flow: row;
+        flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+    padding: 0 30px 0 50px;
+    background: #161617;
+    z-index: 3;
+    position: fixed;
+}
+
+.navMenuMobile--right {
+    margin-left: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.navMenuMobile--right > a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+}
+
+.navMenuMobile__content {
+    -ms-flex-flow: column;
+        flex-flow: column;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    background-color: #161617;
+    width: 100%;
+    padding: 20px 0px 20px 20px;
+    display: none;
+
+}
+
+.navMenuMobile__content > * {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.navMenuMobile__content a:hover{
+    color: #d0d0d1;
+}
+
+#navMenuMobile__logo{
+    background-image: url(https://s.yimg.com/uy/build/images/sprites/general@2x-198faab9.png);
+    background-size: 72px 51px;
+    width: 72px;
+    height: 23px;
+    margin-top: -3px;
+}
+
+.navMenuMobile__navIcon {
+  position: relative;
+  padding-left: 1.25em;
+    padding-top: 1.2em;
+    cursor: pointer;    
+    margin-right: 20px;
+}
+
+.navMenuMobile__navIcon:after
+{
+  content: "";
+  position: absolute;
+  top: 0.25em;
+  left: 0;
+  width: 1em;
+  height: 0.125em;
+  border-top: 0.375em double white;
+  border-bottom: 0.125em solid white;
+  -webkit-transition: background .2s ease-out;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.navMenuMobile__content--expand{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column;
+        flex-flow: column;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    background-color: #161617;
+    width: 100%;
+    padding: 20px 0px 20px 20px;
+}
+
+/** Content Banner **/
+
+.content-banner {
+    min-height: 650px;
+    border: 1px black solid;
+    background-image: url("https://s.yimg.com/uy/build/images/sohp/hero/artic-sky3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    }
+
+
+.content-banner__h1{
+    font-weight: 600;
+    text-align: center;
+    font-size: 2.3em;
+}
+
+.content-banner__p {
+    text-align: center;
+    font-size: 1em;
+    line-height: 22px;
+    padding-bottom: 34px;
+    padding-top: 18px;
+}
+
+.content-banner__Yahoo {
+    text-align: center;
+    font-size: 1.1em;
+    background: #128fdc;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px 4px 4px 4px;
+    width: 200px;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.content-banner__Yahoo:hover{
+    background-color: #1072ab;
+}
+.content-banner__mobileLinks {
+    height: 45px;
+    width: auto;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 30px;
+}
+
+.mobileiOS{
+    height: 44px;
+    width: 148px;
+    background-image: url(https://s.yimg.com/uy/build/images/appstores/ios-2.svg);
+    background-size: 148px 44px;
+    display:inherit;
+    margin-right: 10px;
+}
+
+.android{
+    height: 44px;
+    width: 148px;
+    background-image: url(https://s.yimg.com/uy/build/images/appstores/google-2.svg);
+    background-size: 148px 44px;
+    display:inherit;
+    margin-left: 10px;
+
+}
+
+/** Features Banner **/
+
+.features-banner {
+    height: 480px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    min-width:330px;
+}
+
+.features-banner__left, .features-banner__middle, .features-banner__right {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 calc(100%/3);
+            flex: 1 1 calc(100%/3);
+}
+
+
+.features-banner__left {
+background-image: url("https://s.yimg.com/uy/build/images/sohp/backgrounds/space4.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+position: relative;
+}
+
+.features-banner__left p {
+    padding-bottom: 50px;
+}
+
+#features-banner__left--image {
+     background-image: url("https://s.yimg.com/uy/build/images/sohp/photo-stack2.png");
+    background-position: 50% 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    height: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+.features-banner__middle {
+background-image: url("https://s.yimg.com/uy/build/images/sohp/backgrounds/platforms5.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+}
+
+
+.features-banner__middle__platform{
+    height: 76px;
+    margin-top: 20px;
+    padding-bottom: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.features-banner__middle__platform > * {
+    margin-right: 30px;
+}
+
+.features-banner__middle__platform__apple{
+    background: url(https://s.yimg.com/uy/build/images/sprites/sohp-9ae94c37.png) -37px 0 no-repeat;
+    width: 30px;
+    height: 36px;
+}
+
+.features-banner__middle__platform__android{
+    background: url(https://s.yimg.com/uy/build/images/sprites/sohp-9ae94c37.png) -68px 0 no-repeat;
+    width: 30px;
+    height: 36px;
+}
+
+.features-banner__middle__platform__mac{
+    background: url(https://s.yimg.com/uy/build/images/sprites/sohp-9ae94c37.png) 0 -64px no-repeat;
+    width: 30px;
+    height: 28px;
+    margin-bottom: 4px;
+}
+
+.features-banner__middle__platform__windows{
+    background: url(https://s.yimg.com/uy/build/images/sprites/sohp-9ae94c37.png) 0 0 no-repeat;
+    width: 36px;
+    height: 36px;
+}
+
+
+.features-banner__right {
+background-image: url("https://s.yimg.com/uy/build/images/sohp/backgrounds/search3.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+}
+
+
+.features-banner > * {
+    padding: 0 10px;
+}
+
+.features-banner__h2 {
+    padding-top: 160px;
+    margin-bottom: 5px;
+    font-weight:500;
+    font-size: 1.25em;
+}
+
+.features-banner__p {
+    font-size: 0.9em;
+    padding-top: 5px;
+    padding: 0 10px;
+}
+
+/** Inspiration Banner **/
+
+.inspiration-banner {
+    min-height: 700px; 
+    background-image: url("https://s.yimg.com/uy/build/images/sohp/inspiration/dave3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.inspiration-banner__h2 {
+    padding-top: 175px;
+    padding-bottom: 20px;
+    font-weight:600;
+    font-size: 1.3em;
+}
+ 
+.inspiration-banner__h2, p {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.inspiration-banner__p{
+    padding: 0 35%;
+    padding-bottom: 20px;
+}
+
+
+.inspiration-banner__inspireMe{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    width: 130px;
+    border: 3px solid white;
+    border-radius: 4px 4px 4px 4px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+/** Bottom Banner **/
+
+.bottom-banner {
+width: auto;
+min-height: 614px;
+background-image: url("https://s.yimg.com/uy/build/images/sohp/backgrounds/bottom5.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+}
+
+.bottom-banner__h2 {
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 20px;
+    font-weight:600;
+}
+
+/** Footer **/
+
+footer{
+    height: 300px;
+    background-color: #212727;
+    margin: 0 auto;
+    font-size: 0.85em;
+}
+
+.footer__logo-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 200px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+#footer__logo{
+    background-image: url(https://s.yimg.com/uy/build/images/sprites/general@2x-198faab9.png);
+    background-size: 72px 51px;
+    width: 72px;
+    height: 23px;
+}
+
+.footer__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 0 120px;
+}
+
+.footer__top > a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+footer > hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    width: 78%;
+}
+
+.footer__bottom{
+    padding: 0 160px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    padding: 0 140px;
+    font-size: 0.9em;
+}
+
+.footer__bottom__middle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 20%;
+}
+
+.footer__bottom__left  {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    width: 40%;
+}
+
+
+.footer__bottom__left > * {
+    margin-right: 30px;
+}
+
+.footer__bottom__right {
+    width:40%;
+}
+
+
+.footer__bottom a {
+    text-decoration: none;
+    color:white;
+}
+
+.footer__bottom__right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+}
+
+.footer__bottom__right > * {
+    margin-left: 30px;
+}
+#footer__bottom__right__tumblr{
+    background: url(https://s.yimg.com/uy/build/images/sprites/icons-36c2f8d6.png) -506px -54px no-repeat;
+    width: 11px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    display:block;
+    cursor: pointer;
+}
+
+#footer__bottom__right__fb{
+        background: url(https://s.yimg.com/uy/build/images/sprites/icons-36c2f8d6.png) -470px -184px no-repeat;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    display:block;
+    cursor: pointer;
+}
+#footer__bottom__right__twitter{
+        background: url(https://s.yimg.com/uy/build/images/sprites/icons-36c2f8d6.png) -235px -429px no-repeat;
+    width: 23px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    display:block;
+    cursor: pointer;
+}
+#footer__bottom__right__googleplus{
+    background: url(https://s.yimg.com/uy/build/images/sprites/icons-36c2f8d6.png) -22px -450px no-repeat;
+    width: 21px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    display:block;
+    cursor: pointer;
+}
+
+/** Footer Mobile **/
+.footer__mobile {
+    display:none; 
+}
+
+.footer__mobile a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
+    font-weight: 500;
+     margin-left: 25px;
+}
+
+.footer__mobile__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.footer__mobile__top__left, .footer__mobile__top__right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column;
+        flex-flow: column;
+    width: 50%;
+}
+
+ .footer__mobile__top__left > *, .footer__mobile__top__right > *,.footer__mobile__middle__left > *,.footer__mobile__middle__right > *{
+     margin-bottom: 20px;
+}
+
+
+.footer__mobile__middle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer__mobile__middle__left, .footer__mobile__middle__right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    -ms-flex-flow: column;
+        flex-flow: column;
+}
+
+.footer__mobile__bottom {
+    margin: 20px 0px;
+}
+
+.footer__mobile__social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+#footer__mobile__social__tumblr{
+    background: url(https://s.yimg.com/uy/build/images/sprites/icons-36c2f8d6.png) -506px -54px no-repeat;
+    width: 11px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    display:block;
+    cursor: pointer;
+}
+
+#footer__mobile__social__fb{
+        background: url(https://s.yimg.com/uy/build/images/sprites/icons-36c2f8d6.png) -470px -184px no-repeat;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    display:block;
+    cursor: pointer;
+}
+#footer__mobile__social__twitter{
+        background: url(https://s.yimg.com/uy/build/images/sprites/icons-36c2f8d6.png) -235px -429px no-repeat;
+    width: 23px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    display:block;
+    cursor: pointer;
+}
+#footer__mobile__social__googleplus{
+    background: url(https://s.yimg.com/uy/build/images/sprites/icons-36c2f8d6.png) -22px -450px no-repeat;
+    width: 21px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    display:block;
+    cursor: pointer;
+}
+
+
+/** Header **/
+
+
+@media all and (max-width: 700px) {
+    body {
+        min-width: 0px;
+    }
+    
+    .navMenu {
+        display: none;
+    }
+    
+    .navMenuMobile {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    
+    
+    .content-banner {
+        min-height: 660px;
+        margin-bottom: 480px;
+    }
+    
+    .content-banner p {
+        padding: 20px 20px;
+    }
+    
+    .features-banner__left, 
+    .features-banner__middle, 
+    .features-banner__right {
+        height: 480px;
+        min-height: 480px;
+    }
+    
+   .features-banner {
+        -ms-flex-flow: column;
+            flex-flow: column;
+       -webkit-box-flex: 1;
+           -ms-flex: 1 1 auto;
+               flex: 1 1 auto;
+       min-height: 480px;
+    }
+    
+    .features-banner p {
+        padding: 0 100px;
+    }
+    
+    .inspiration-banner {
+        margin-top: 480px;
+    }
+    
+    .inspiration-banner__p{
+        padding: 20px 50px;
+    }
+    
+    .bottomBucket__h2 {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    
+    .footer__mobile {
+        padding-bottom: 640px;
+        display: block;
+    }
+    
+
+    .footer__screen {
+        display: none;
+    }
+   
+
+    
+}
